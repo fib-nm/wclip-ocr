@@ -6,7 +6,7 @@ import shutil
 
 def read_clipboard_image():
     try:
-        image_data = subprocess.check_output(["wl-paste", "--type", "image/jpg"])
+        image_data = subprocess.check_output(["wl-paste", "--type", "image/jpg"], stderr=subprocess.DEVNULL)
         return Image.open(io.BytesIO(image_data))
     except subprocess.CalledProcessError:
         return None
