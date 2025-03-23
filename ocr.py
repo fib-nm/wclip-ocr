@@ -2,10 +2,11 @@ import subprocess
 from PIL import Image
 import io
 import pytesseract
+import shutil
 
 def read_clipboard_image():
     try:
-        image_data = subprocess.check_output(["wl-paste", "--type", "image/png"])
+        image_data = subprocess.check_output(["wl-paste", "--type", "image/jpg"])
         return Image.open(io.BytesIO(image_data))
     except subprocess.CalledProcessError:
         return None
@@ -19,7 +20,6 @@ def main():
         try:
             input()
         except EOFError:
-            print("Program terminated.")
             break
 
         image = read_clipboard_image()
@@ -32,7 +32,11 @@ def main():
             write_clipboard_text(text)
             print("Extracted text copied to the clipboard!")
 
+            terminal_width = shutil.get_terminal_size().columns
+            print("Extracted text:")
+            print("=" * terminal_width)
             print(text)
+            print("=" * terminal_width)
         else:
             print("No image found in the clipboard!")
 
