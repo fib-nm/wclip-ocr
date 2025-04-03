@@ -7,6 +7,4 @@
 
 # Зависимости
 1. wl-clipboard
-2. pytesseract
-3. pillow
 4. tesseract
