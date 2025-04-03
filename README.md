@@ -40,7 +40,7 @@ Program not only prints extracted text, but also copies it to your clipboard, so
 
 ## Making binary globally callable
 
-If you don't want to write full path to the binary every time you use the program, you can add alias for it to your `.bashrc` file.
+If you don't want to write full path to the binary every time you use the program, you can add alias for it to your `.bashrc` file:
 ```bash
 alias ocr='/path/to/wclip-ocr/wclip-ocr'
 ```
