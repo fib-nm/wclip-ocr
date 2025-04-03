@@ -8,7 +8,7 @@ pip install pytesseract
 pip install pillow
 pip install pyinstaller
 
-pyinstaller ocr.py
+pyinstaller --onefile --name wclip-ocr --distpath . ocr.py
 
 deactivate
 
