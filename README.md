@@ -19,7 +19,7 @@ cd wclip-ocr
 ./build.sh
 ```
 
-After running the script you will have binary `wclip-ocr` in `wclip-ocr/dist` directory and symlink to it in `wclip-ocr` directory.
+After running the script you will have binary `wclip-ocr` in `wclip-ocr`.
 
 # Usage
 Launch `wclip-ocr` script.
@@ -38,10 +38,9 @@ Since program uses tesseract for OCR, to get new languages you will need to inst
 
 Program not only prints extracted text, but also copies it to your clipboard, so you can immediately paste it wherever you need.
 
-## Adding binary to PATH
+## Making binary globally callable
 
-If you don't want to write full path to the binary every time you use the program, you can add `python-ocr` directory to PATH by adding line
+If you don't want to write full path to the binary every time you use the program, you can add alias for it to your `.bashrc` file.
 ```bash
-export PATH="/path/to/python-ocr-directory/dist:$PATH"
+alias ocr='/path/to/wclip-ocr/wclip-ocr'
 ```
-to your `.bashrc` file.
