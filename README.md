@@ -1,10 +1,19 @@
-# Описание программы:
+# wclip-ocr
+wclip-ocr is a console app for Wayland that can extract text from images stored in clipboard.
 
-1. Пользователь запускает программу в терминале
-2. Чтобы извлечь текст из картинки, пользователь должен скопировать ее в буфер обмена, после чего нажать Enter в терминале с запущенной программой. После этого программа копирует картинку из буфера обмена и выводит 'Image successfully pasted!'
-3. Программа извлекает текст из картинки и копирует его в буфер обмена пользователя. При этом, программа выводит 'Text successfully extracted!', 'Extracted text copied to the clipboard!'
-4. Пользователь завершает работу программы, отправляя eof
-
-# Зависимости
+# Dependencies
 1. wl-clipboard
-4. tesseract
+2. tesseract
+
+# Installation
+1. Make sure that you installed dependencies and that they are accessable from PARH.
+2. Clone the repository
+3. Run `build.sh` script. It will
+    1. Install python dependencies of a project and PyInstaller in a venv
+    2. Create binary using PyInstaller
+    3. Delete venv
+
+After running the script you will have binary located in dist/wclip-ocr/wclip-ocr.
+
+# Usage
+1. 
