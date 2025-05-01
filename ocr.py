@@ -26,6 +26,8 @@ def main():
             user_input = input()
         except EOFError:
             break
+        except KeyboardInterrupt:
+            break
         
         if not user_input:
             image = read_clipboard_image()
