@@ -36,10 +36,7 @@ To close application, press `Ctrl+D`.
 # Tips
 Since program uses tesseract for OCR, to get new languages you will need to install `tesseract-data-lang` packages from your system's repository.
 
-Program not only prints extracted text, but also copies it to your clipboard, so you can immediately paste it wherever you need.
-
 ## Making binary globally callable
-
 If you don't want to write full path to the binary every time you use the program, you can add alias for it to your `.bashrc` file:
 ```bash
 alias ocr='/path/to/wclip-ocr/wclip-ocr'

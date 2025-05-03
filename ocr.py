@@ -11,9 +11,6 @@ def read_clipboard_image():
     except subprocess.CalledProcessError:
         return None
 
-def write_clipboard_text(text):
-    subprocess.run(["wl-copy", "--type", "text/plain;charset=utf-8", text])
-
 def main():
     languages = pytesseract.get_languages(config='')
     print("Available languages: " + ", ".join(languages))
@@ -36,9 +33,6 @@ def main():
 
                 text = pytesseract.image_to_string(image, lang=current_language)
                 print("Text successfully extracted!")
-
-                write_clipboard_text(text)
-                print("Extracted text copied to the clipboard!")
 
                 terminal_width = shutil.get_terminal_size().columns
                 print("Extracted text:")
